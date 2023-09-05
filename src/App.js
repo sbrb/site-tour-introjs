@@ -243,7 +243,11 @@ function App() {
         stepsToUse = thirdStep;
       } else if (suggestions.length === 0 && tourStarted) {
         stepsToUse = secondStepError;
+        if (!inputValue) {
+          stepsToUse = firstStep;
+        }
       }
+
       introInstance.setOptions({
         steps: stepsToUse,
         tooltipClass: "custom-tooltip",
@@ -251,7 +255,7 @@ function App() {
 
       introInstance.start();
     });
-  }, [suggestions]);
+  }, [suggestions, inputValue]);
 
   useEffect(() => {
     const hasTourCompleted = localStorage.getItem("tourCompleted");
