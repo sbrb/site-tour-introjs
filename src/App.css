@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+  background-color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-box {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* transition: all 0.3s ease; */
+  width: 300px;
+  margin: 0 auto;
+}
+
+input {
+  border: none;
+  outline: none;
+  /* flex-grow: 1; */
+  padding: 5px;
+}
+
+.selected-suggestion {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+  border: 2px solid #ccc;
+  padding: 0.5rem;
+  background-color: #93dd87;
+  border-radius: 5px;
+}
+
+.selected-suggestion span {
+  margin-right: 10px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  background-color: #93dd87;
+  color: #fff;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.7rem 1.2rem;
+  margin-top: .5rem;
+}
+
+ul.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+ul.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+  margin: 0.2rem;
+  background-color: #93dd87;
+  border-radius: 5px;
+}
+
+ul.suggestions li:hover {
+  background-color: #f0f0f0;
+}
+
+.focused .search-box {
+  justify-content: flex-start;
+}
+
+.focused input {
+  margin-bottom: 10px;
+}
+
+.close-button {
+  background-color: #ff5a5a;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px 8px;
+  font-size: 14px;
+}
+
+.close-button:hover {
+  background-color: #ff0000;
+}
+
+.custom-tooltip {
+  background-color: #ff9900;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.introjs-button {
+  display: none !important;
+}
