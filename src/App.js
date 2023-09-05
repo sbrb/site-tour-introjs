@@ -167,7 +167,7 @@ import React, { useState, useEffect } from "react";
 import "intro.js/introjs.css";
 import introJs from "intro.js";
 import "./App.css";
-import Countries from "./data/Countries";
+import Countries from "./Countries";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
